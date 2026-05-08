@@ -99,17 +99,17 @@ function App() {
       </section>
 
       {/* ===== 3. Diferenciais ===== */}
-      <section className="flex flex-col gap-10 px-6 py-16 bg-bg-soft">
-        <div className="flex flex-col gap-2.5">
-          <p className="font-body text-[13px] font-extrabold text-accent uppercase tracking-wide">
+      <section id="diferenciais" className="flex flex-col gap-10 md:gap-12 lg:gap-16 px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 bg-bg-soft">
+        <div className="flex flex-col gap-2.5 lg:max-w-[60%]">
+          <p className="font-body text-[13px] md:text-sm font-extrabold text-accent uppercase tracking-wide">
             Por que escolher a NeiUniformes
           </p>
-          <h2 className="font-heading text-[30px] font-bold text-text leading-[1.1]">
+          <h2 className="font-heading text-[30px] md:text-[36px] lg:text-[40px] font-bold text-text leading-[1.1]">
             Uniformes bem feitos, processo simples e atendimento de verdade
           </h2>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
           {[
             {
               icon: MessagesSquare,
@@ -134,15 +134,15 @@ function App() {
           ].map(({ icon: Icon, title, desc }) => (
             <div
               key={title}
-              className="flex flex-col gap-3.5 bg-white rounded-md border border-line p-5"
+              className="flex flex-col gap-3.5 bg-white rounded-md border border-line p-5 md:p-6"
             >
               <div className="flex items-center justify-center w-10 h-10 bg-accent rounded-sm">
                 <Icon className="w-5 h-5 text-text" />
               </div>
-              <h3 className="font-heading text-xl font-bold text-text leading-[1.1]">
+              <h3 className="font-heading text-xl md:text-[22px] font-bold text-text leading-[1.1]">
                 {title}
               </h3>
-              <p className="font-body text-sm text-muted leading-relaxed">
+              <p className="font-body text-sm md:text-[15px] text-muted leading-relaxed">
                 {desc}
               </p>
             </div>
@@ -151,21 +151,21 @@ function App() {
       </section>
 
       {/* ===== 4. Como Funciona ===== */}
-      <section className="flex flex-col gap-10 px-6 py-16">
-        <div className="flex flex-col gap-2.5">
-          <p className="font-body text-[13px] font-extrabold text-accent uppercase tracking-wide">
+      <section id="como-funciona" className="flex flex-col gap-10 md:gap-12 lg:gap-16 px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24">
+        <div className="flex flex-col gap-2.5 md:gap-4 lg:max-w-[60%]">
+          <p className="font-body text-[13px] md:text-sm font-extrabold text-accent uppercase tracking-wide">
             Como funciona
           </p>
-          <h2 className="font-heading text-[30px] font-bold text-text leading-[1.1]">
+          <h2 className="font-heading text-[30px] md:text-[36px] lg:text-[40px] font-bold text-text leading-[1.1]">
             Do primeiro contato à entrega, sem ruído
           </h2>
-          <p className="font-body text-[15px] text-muted leading-relaxed">
+          <p className="font-body text-[15px] md:text-base text-muted leading-relaxed">
             Um processo objetivo para transformar a identidade da sua empresa em
             uniformes prontos para uso.
           </p>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col md:flex-row md:gap-5 gap-4">
           {[
             {
               step: '01',
@@ -185,15 +185,15 @@ function App() {
           ].map(({ step, title, desc }) => (
             <div
               key={step}
-              className="flex flex-col gap-4 bg-white border border-line rounded-md p-6"
+              className="flex flex-col gap-4 flex-1 bg-white border border-line rounded-md p-6 md:p-7 lg:p-8"
             >
-              <span className="font-heading text-5xl font-extrabold text-accent leading-[0.9]">
+              <span className="font-heading text-5xl md:text-[56px] lg:text-[64px] font-extrabold text-accent leading-[0.9]">
                 {step}
               </span>
-              <h3 className="font-heading text-[22px] font-bold text-text leading-[1.1]">
+              <h3 className="font-heading text-[22px] md:text-xl lg:text-2xl font-bold text-text leading-[1.1]">
                 {title}
               </h3>
-              <p className="font-body text-sm text-muted leading-relaxed">
+              <p className="font-body text-sm md:text-[15px] text-muted leading-relaxed">
                 {desc}
               </p>
             </div>
