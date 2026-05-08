@@ -367,90 +367,94 @@ function App() {
       </section>
 
       {/* ===== 7. CTA Final ===== */}
-      <section className="flex flex-col items-center gap-6 md:gap-8 px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 bg-accent">
-        <div className="flex flex-col gap-3 text-center max-w-2xl">
-          <h2 className="font-heading text-[34px] md:text-[40px] lg:text-[48px] font-bold text-text leading-[1.1]">
-            Pronto para uniformizar sua equipe?
-          </h2>
-          <p className="font-body text-base md:text-lg text-text leading-relaxed">
-            Conte o que sua empresa precisa e receba um atendimento direto para
-            montar o melhor orçamento.
-          </p>
-        </div>
-
-        <button
-          type="button"
-          className="flex items-center justify-center gap-2.5 w-full md:w-fit bg-text text-bg font-body text-[15px] md:text-base font-extrabold py-4 md:py-5 px-6 md:px-8 rounded-sm cursor-pointer border-none hover:bg-text/90 transition-colors"
-        >
-          <MessageCircle className="w-[18px] md:w-5 h-[18px] md:h-5" />
-          Fale conosco pelo WhatsApp
-        </button>
-      </section>
-
-      {/* ===== 8. Footer ===== */}
-      <footer className="flex flex-col gap-9 lg:gap-12 px-6 md:px-8 lg:px-12 pt-12 md:pt-14 lg:pt-16 pb-8 md:pb-10 bg-text text-white">
-        <div className="flex flex-col lg:flex-row gap-9 lg:gap-16">
-          <div className="flex flex-col gap-4 lg:max-w-sm">
-            <div className="flex items-center gap-2.5">
-              <div className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-sm overflow-hidden">
-                <img
-                  src="/logo.svg"
-                  alt="NeiUniformes"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <span className="font-heading text-lg md:text-xl font-extrabold text-bg">
-                NeiUniformes
-              </span>
-            </div>
-            <p className="font-body text-sm md:text-[15px] text-footer-text leading-relaxed">
-              Uniformes corporativos personalizados para empresas que querem
-              vestir suas equipes com presença, conforto e confiança.
+      <section className="w-full bg-accent py-16 md:py-20 lg:py-24">
+        <div className="flex flex-col items-center gap-6 md:gap-8 mx-auto max-w-[1126px] px-6 md:px-8 lg:px-12">
+          <div className="flex flex-col gap-3 text-center max-w-2xl">
+            <h2 className="font-heading text-[34px] md:text-[40px] lg:text-[48px] font-bold text-text leading-[1.1]">
+              Pronto para uniformizar sua equipe?
+            </h2>
+            <p className="font-body text-base md:text-lg text-text leading-relaxed">
+              Conte o que sua empresa precisa e receba um atendimento direto
+              para montar o melhor orçamento.
             </p>
           </div>
 
-          <div className="flex gap-12 md:gap-16 lg:gap-20">
-            <div className="flex flex-col gap-3">
-              <span className="font-heading text-base font-bold text-bg">
-                Links
-              </span>
-              <span className="font-body text-sm md:text-[15px] text-footer-text cursor-pointer hover:text-bg transition-colors">
-                Diferenciais
-              </span>
-              <span className="font-body text-sm md:text-[15px] text-footer-text cursor-pointer hover:text-bg transition-colors">
-                Como funciona
-              </span>
-              <span className="font-body text-sm md:text-[15px] text-footer-text cursor-pointer hover:text-bg transition-colors">
-                Produtos
-              </span>
-              <span className="font-body text-sm md:text-[15px] text-footer-text cursor-pointer hover:text-bg transition-colors">
-                Depoimentos
-              </span>
+          <button
+            type="button"
+            className="flex items-center justify-center gap-2.5 w-full md:w-fit bg-text text-bg font-body text-[15px] md:text-base font-extrabold py-4 md:py-5 px-6 md:px-8 rounded-sm cursor-pointer border-none hover:bg-text/90 transition-colors"
+          >
+            <MessageCircle className="w-[18px] md:w-5 h-[18px] md:h-5" />
+            Fale conosco pelo WhatsApp
+          </button>
+        </div>
+      </section>
+
+      {/* ===== 8. Footer ===== */}
+      <footer className="w-full bg-text text-white pt-12 md:pt-14 lg:pt-16 pb-8 md:pb-10">
+        <div className="flex flex-col gap-9 lg:gap-12 mx-auto max-w-[1126px] px-6 md:px-8 lg:px-12">
+          <div className="flex flex-col lg:flex-row gap-9 lg:gap-16">
+            <div className="flex flex-col gap-4 lg:max-w-sm">
+              <div className="flex items-center gap-2.5">
+                <div className="flex items-center justify-center w-9 h-9 md:w-10 md:h-10 rounded-sm overflow-hidden">
+                  <img
+                    src="/logo.svg"
+                    alt="NeiUniformes"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <span className="font-heading text-lg md:text-xl font-extrabold text-bg">
+                  NeiUniformes
+                </span>
+              </div>
+              <p className="font-body text-sm md:text-[15px] text-footer-text leading-relaxed">
+                Uniformes corporativos personalizados para empresas que querem
+                vestir suas equipes com presença, conforto e confiança.
+              </p>
             </div>
-            <div className="flex flex-col gap-3">
-              <span className="font-heading text-base font-bold text-bg">
-                Contato
-              </span>
-              <span className="font-body text-[13px] md:text-sm text-footer-text">
-                WhatsApp: (00) 00000-0000
-              </span>
-              <span className="font-body text-[13px] md:text-sm text-footer-text">
-                contato@neiuniformes.com.br
-              </span>
-              <span className="font-body text-[13px] md:text-sm text-footer-text">
-                Atendimento para empresas
-              </span>
+
+            <div className="flex gap-12 md:gap-16 lg:gap-20">
+              <div className="flex flex-col gap-3">
+                <span className="font-heading text-base font-bold text-bg">
+                  Links
+                </span>
+                <span className="font-body text-sm md:text-[15px] text-footer-text cursor-pointer hover:text-bg transition-colors">
+                  Diferenciais
+                </span>
+                <span className="font-body text-sm md:text-[15px] text-footer-text cursor-pointer hover:text-bg transition-colors">
+                  Como funciona
+                </span>
+                <span className="font-body text-sm md:text-[15px] text-footer-text cursor-pointer hover:text-bg transition-colors">
+                  Produtos
+                </span>
+                <span className="font-body text-sm md:text-[15px] text-footer-text cursor-pointer hover:text-bg transition-colors">
+                  Depoimentos
+                </span>
+              </div>
+              <div className="flex flex-col gap-3">
+                <span className="font-heading text-base font-bold text-bg">
+                  Contato
+                </span>
+                <span className="font-body text-[13px] md:text-sm text-footer-text">
+                  WhatsApp: (00) 00000-0000
+                </span>
+                <span className="font-body text-[13px] md:text-sm text-footer-text">
+                  contato@neiuniformes.com.br
+                </span>
+                <span className="font-body text-[13px] md:text-sm text-footer-text">
+                  Atendimento para empresas
+                </span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4 pt-5 md:pt-6 border-t border-footer-border">
-          <span className="font-body text-[13px] md:text-sm text-footer-dim">
-            © 2026 NeiUniformes. Todos os direitos reservados.
-          </span>
-          <span className="font-body text-[13px] md:text-sm text-footer-dim">
-            Privacidade e termos
-          </span>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-4 pt-5 md:pt-6 border-t border-footer-border">
+            <span className="font-body text-[13px] md:text-sm text-footer-dim">
+              © 2026 NeiUniformes. Todos os direitos reservados.
+            </span>
+            <span className="font-body text-[13px] md:text-sm text-footer-dim">
+              Privacidade e termos
+            </span>
+          </div>
         </div>
       </footer>
     </div>
