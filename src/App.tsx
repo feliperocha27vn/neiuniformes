@@ -202,24 +202,24 @@ function App() {
       </section>
 
       {/* ===== 5. Produtos ===== */}
-      <section className="flex flex-col gap-10 px-6 py-16 bg-bg-soft">
-        <div className="flex flex-col gap-3.5">
+      <section id="produtos" className="flex flex-col gap-10 md:gap-12 lg:gap-16 px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 bg-bg-soft">
+        <div className="flex flex-col gap-3.5 lg:max-w-[60%]">
           <div className="flex items-center gap-2.5">
             <div className="w-7 h-[3px] bg-accent rounded-[1px]" />
-            <span className="font-body text-[13px] font-bold text-text">
+            <span className="font-body text-[13px] md:text-sm font-bold text-text">
               Produtos
             </span>
           </div>
-          <h2 className="font-heading text-[30px] font-bold text-text leading-[1.1]">
+          <h2 className="font-heading text-[30px] md:text-[36px] lg:text-[40px] font-bold text-text leading-[1.1]">
             Uniformes corporativos para cada rotina da sua equipe
           </h2>
-          <p className="font-body text-[15px] text-muted leading-[1.55]">
+          <p className="font-body text-[15px] md:text-base text-muted leading-[1.55]">
             Peças profissionais com acabamento limpo e identidade visual
             consistente para empresas que precisam vestir bem todos os dias.
           </p>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5 lg:gap-6">
           {[
             {
               icon: Shirt,
@@ -252,7 +252,7 @@ function App() {
           ].map(({ icon: Icon, num, title, desc, tag }) => (
             <div
               key={num}
-              className="flex flex-col gap-5 bg-white border border-line rounded-md p-[22px]"
+              className="flex flex-col gap-5 bg-white border border-line rounded-md p-[22px] md:p-6"
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center justify-center w-11 h-11 bg-[#fff7d6] rounded-sm">
@@ -263,10 +263,10 @@ function App() {
                 </span>
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="font-heading text-xl font-bold text-text">
+                <h3 className="font-heading text-xl md:text-[22px] font-bold text-text">
                   {title}
                 </h3>
-                <p className="font-body text-sm text-muted leading-relaxed">
+                <p className="font-body text-sm md:text-[15px] text-muted leading-relaxed">
                   {desc}
                 </p>
               </div>
@@ -281,24 +281,24 @@ function App() {
       </section>
 
       {/* ===== 6. Depoimentos ===== */}
-      <section className="flex flex-col gap-10 px-6 py-16">
-        <div className="flex flex-col gap-3.5">
+      <section id="depoimentos" className="flex flex-col gap-10 md:gap-12 lg:gap-16 px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24">
+        <div className="flex flex-col gap-3.5 lg:max-w-[60%]">
           <div className="flex items-center gap-2.5">
             <div className="w-7 h-[3px] bg-accent rounded-[1px]" />
-            <span className="font-body text-[13px] font-bold text-text">
+            <span className="font-body text-[13px] md:text-sm font-bold text-text">
               Depoimentos
             </span>
           </div>
-          <h2 className="font-heading text-[30px] font-bold text-text leading-[1.1]">
+          <h2 className="font-heading text-[30px] md:text-[36px] lg:text-[40px] font-bold text-text leading-[1.1]">
             Empresas que confiam na NeiUniformes
           </h2>
-          <p className="font-body text-[15px] text-muted leading-[1.55]">
+          <p className="font-body text-[15px] md:text-base text-muted leading-[1.55]">
             Atendimento próximo, produção cuidadosa e entregas pensadas para
             manter equipes uniformizadas sem complicação.
           </p>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col md:flex-row md:gap-5 gap-4">
           {[
             {
               quote:
@@ -324,25 +324,25 @@ function App() {
           ].map(({ quote, name, role, avatar }) => (
             <div
               key={name}
-              className="flex flex-col gap-5 bg-white border border-line rounded-md p-6"
+              className="flex flex-col gap-5 flex-1 bg-white border border-line rounded-md p-6 md:p-7 lg:p-8"
             >
-              <span className="font-heading text-[40px] font-bold text-accent leading-[0.8] select-none">
+              <span className="font-heading text-[40px] md:text-[48px] font-bold text-accent leading-[0.8] select-none">
                 &ldquo;
               </span>
-              <p className="font-body text-[15px] text-text leading-[1.5]">
+              <p className="font-body text-[15px] md:text-base text-text leading-[1.5]">
                 {quote}
               </p>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 mt-auto">
                 <div className="flex items-center justify-center w-10 h-10 rounded-full bg-accent shrink-0">
                   <span className="font-body text-sm font-bold text-text">
                     {avatar}
                   </span>
                 </div>
                 <div className="flex flex-col gap-0.5">
-                  <span className="font-body text-sm font-bold text-text">
+                  <span className="font-body text-sm md:text-[15px] font-bold text-text">
                     {name}
                   </span>
-                  <span className="font-body text-[13px] text-muted">
+                  <span className="font-body text-[13px] md:text-sm text-muted">
                     {role}
                   </span>
                 </div>
