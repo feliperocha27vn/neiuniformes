@@ -111,6 +111,9 @@ function App() {
                   src="/equipe-uniformizada.jpeg"
                   alt="Equipe Uniformizada"
                   className="w-full h-full object-cover"
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="sync"
                 />
               </div>
             </div>
