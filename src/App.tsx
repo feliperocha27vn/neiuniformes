@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import {
   BadgePlus,
+  MapPin,
   Menu,
   MessageCircle,
   MessagesSquare,
@@ -35,17 +36,15 @@ function App() {
             <Menu className="w-6 h-6 text-text cursor-pointer lg:hidden" />
 
             <nav className="hidden lg:flex items-center gap-8">
-              {['Diferenciais', 'Como funciona', 'Produtos'].map(
-                (link) => (
-                  <a
-                    key={link}
-                    href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
-                    className="font-body text-sm font-medium text-muted hover:text-text transition-colors no-underline"
-                  >
-                    {link}
-                  </a>
-                ),
-              )}
+              {['Diferenciais', 'Como funciona', 'Produtos'].map((link) => (
+                <a
+                  key={link}
+                  href={`#${link.toLowerCase().replace(/\s+/g, '-')}`}
+                  className="font-body text-sm font-medium text-muted hover:text-text transition-colors no-underline"
+                >
+                  {link}
+                </a>
+              ))}
               <button
                 type="button"
                 className="bg-accent text-zinc-50 font-body text-sm font-bold py-2.5 px-6 rounded-full cursor-pointer border-none hover:-translate-y-0.5 hover:shadow-md shadow-accent/30 transition-all"
@@ -60,8 +59,8 @@ function App() {
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          className="w-full pt-20 md:pt-28 lg:pt-32 pb-14 md:pb-20 lg:pb-24"
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="w-full pt-6 md:pt-8 lg:pt-12 pb-14 md:pb-20 lg:pb-24"
         >
           <div className="mx-auto w-full max-w-281.5 flex flex-col gap-6 lg:flex-row lg:items-center lg:gap-12 xl:gap-20 px-6 md:px-8 lg:px-12">
             <div className="flex flex-col gap-6 lg:flex-1">
@@ -95,17 +94,14 @@ function App() {
               </div>
             </div>
 
-            <div className="relative rounded-md overflow-hidden border border-line lg:flex-1 lg:h-105">
-              <div className="bg-[#f0f0f0] h-55 md:h-70 lg:h-full flex items-end p-4 md:p-6">
-                <div className="flex-1" />
-              </div>
-              <div className="bg-white/95 p-3.5 md:p-4 flex flex-col gap-1 border-t border-line lg:hidden">
-                <p className="font-heading text-[13px] md:text-sm font-bold text-text">
-                  Imagem: equipe uniformizada
-                </p>
-                <p className="font-body text-xs md:text-sm text-muted">
-                  Foto de colaboradores com uniformes corporativos personalizados.
-                </p>
+            <div className="relative lg:flex-1 flex items-center justify-center mt-10 lg:mt-0 lg:h-120">
+              {/* Main Image Container */}
+              <div className="relative w-full max-w-md lg:max-w-none h-80 md:h-100 lg:h-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10 border border-white/20">
+                <img
+                  src="/equipe-uniformizada.jpeg"
+                  alt="Equipe Uniformizada"
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
@@ -115,8 +111,8 @@ function App() {
         <motion.section
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           id="diferenciais"
           className="w-full bg-bg-soft py-16 md:py-20 lg:py-24"
         >
@@ -176,8 +172,8 @@ function App() {
         <motion.section
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           id="como-funciona"
           className="w-full py-16 md:py-20 lg:py-24"
         >
@@ -190,8 +186,8 @@ function App() {
                 Do primeiro contato à entrega, sem ruído
               </h2>
               <p className="font-body text-[15px] md:text-base text-muted leading-relaxed">
-                Um processo objetivo para transformar a identidade da sua empresa
-                em uniformes prontos para uso.
+                Um processo objetivo para transformar a identidade da sua
+                empresa em uniformes prontos para uso.
               </p>
             </div>
 
@@ -236,8 +232,8 @@ function App() {
         <motion.section
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.7, ease: 'easeOut' }}
           id="produtos"
           className="w-full bg-bg-soft py-16 md:py-20 lg:py-24"
         >
@@ -321,11 +317,77 @@ function App() {
         </motion.section>
       </div>
 
+      {/* ===== 6. Localização da Fábrica ===== */}
       <motion.section
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true, margin: '-100px' }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
+        id="localizacao"
+        className="w-full bg-white py-16 md:py-20 lg:py-24"
+      >
+        <div className="mx-auto w-full max-w-281.5 flex flex-col gap-10 md:gap-12 lg:gap-16 px-6 md:px-8 lg:px-12">
+          <div className="flex flex-col gap-2.5 md:gap-4 lg:max-w-3/5">
+            <p className="font-body text-[13px] md:text-sm font-extrabold text-accent uppercase tracking-wide">
+              Nossa Estrutura
+            </p>
+            <h2 className="font-heading text-[30px] md:text-[36px] lg:text-[40px] font-bold text-text leading-[1.1]">
+              Venha conhecer nossa fábrica
+            </h2>
+            <p className="font-body text-[15px] md:text-base text-muted leading-relaxed">
+              Nossa produção é feita com equipamentos modernos e uma equipe
+              especializada para garantir o melhor acabamento em cada peça.
+            </p>
+          </div>
+
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
+            {/* Informações */}
+            <div className="flex flex-col gap-5 lg:w-1/3">
+              <div className="flex flex-col gap-3 p-6 bg-bg-soft border border-line rounded-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="flex items-center justify-center w-10 h-10 bg-accent-soft rounded-md shrink-0">
+                    <MapPin className="w-5 h-5 text-accent-dark" />
+                  </div>
+                  <h3 className="font-heading text-xl font-bold text-text">
+                    Endereço
+                  </h3>
+                </div>
+                <p className="font-body text-sm md:text-base text-muted leading-relaxed">
+                  Av. Edilsinho Capuano, 60 - Jardim Capuano<br />
+                  Birigui - SP, 16204-115
+                </p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Av.+Edilsinho+Capuano,+60+-+Jardim+Capuano,+Birigui+-+SP,+16204-115"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm font-bold text-accent hover:text-accent-dark transition-colors w-fit mt-2"
+                >
+                  Ver no mapa &rarr;
+                </a>
+              </div>
+            </div>
+
+            {/* Mapa iframe */}
+            <div className="relative flex-1 min-h-[300px] md:min-h-[400px] rounded-lg overflow-hidden border border-line shadow-sm bg-bg-soft">
+              <iframe
+                src="https://maps.google.com/maps?q=Av.+Edilsinho+Capuano,+60+-+Jardim+Capuano,+Birigui+-+SP,+16204-115&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                className="absolute inset-0 w-full h-full border-0"
+                allowFullScreen={false}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Localização da Fábrica"
+              />
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* ===== 7. CTA ===== */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: '-100px' }}
+        transition={{ duration: 0.7, ease: 'easeOut' }}
         className="w-full bg-accent py-16 md:py-20 lg:py-24"
       >
         <div className="flex flex-col items-center gap-6 md:gap-8 mx-auto max-w-281.5 px-6 md:px-8 lg:px-12">
