@@ -22,7 +22,6 @@ const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent
 function App() {
   return (
     <>
-      <div className="flex flex-col w-full min-h-screen">
         {/* ===== 1. Header ===== */}
         <header className="w-full bg-white/95 border-b border-line sticky top-0 z-50 backdrop-blur-sm">
           <div className="mx-auto w-full max-w-281.5 flex items-center justify-between px-5 md:px-8 lg:px-12 h-15 md:h-18 lg:h-20">
@@ -41,7 +40,7 @@ function App() {
 
             <Menu className="w-6 h-6 text-text cursor-pointer lg:hidden" />
 
-            <nav className="hidden lg:flex items-center gap-8">
+            <nav aria-label="Menu principal" className="hidden lg:flex items-center gap-8">
               {['Diferenciais', 'Como funciona', 'Produtos'].map((link) => (
                 <a
                   key={link}
@@ -63,6 +62,7 @@ function App() {
           </div>
         </header>
 
+        <main>
         {/* ===== 2. Hero ===== */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
@@ -109,7 +109,7 @@ function App() {
               <div className="relative w-full max-w-md lg:max-w-none h-80 md:h-100 lg:h-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl z-10 border border-white/20">
                 <img
                   src="/equipe-uniformizada.jpeg"
-                  alt="Equipe Uniformizada"
+                  alt="Equipe uniformizada com camisetas corporativas personalizadas pela NeiUniformes"
                   className="w-full h-full object-cover"
                   loading="eager"
                   fetchPriority="high"
@@ -328,7 +328,6 @@ function App() {
             </div>
           </div>
         </motion.section>
-      </div>
 
       {/* ===== 6. Localização da Fábrica ===== */}
       <motion.section
@@ -433,6 +432,8 @@ function App() {
           </a>
         </div>
       </motion.section>
+
+        </main>
 
       {/* ===== 8. Footer ===== */}
       <footer className="w-full bg-text text-white pt-12 md:pt-14 lg:pt-16 pb-8 md:pb-10">
