@@ -12,7 +12,7 @@ import {
   Truck,
   Utensils,
 } from 'lucide-react';
-import Map, { Marker } from 'react-map-gl/maplibre';
+import MapGL, { Marker } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
 function App() {
@@ -372,7 +372,7 @@ function App() {
 
             {/* Mapa react-map-gl */}
             <div className="relative flex-1 min-h-[300px] md:min-h-[400px] rounded-lg overflow-hidden border border-line shadow-sm bg-bg-soft z-0">
-              <Map
+              <MapGL
                 initialViewState={{
                   longitude: -50.3474597,
                   latitude: -21.3004256,
@@ -383,9 +383,9 @@ function App() {
                   sources: {
                     osm: {
                       type: 'raster',
-                      tiles: ['https://a.tile.openstreetmap.org/{z}/{x}/{y}.png'],
+                      tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
                       tileSize: 256,
-                      attribution: '&copy; OpenStreetMap Contributors',
+                      attribution: '&copy; OpenStreetMap contributors',
                       maxzoom: 19
                     }
                   },
@@ -400,7 +400,7 @@ function App() {
                 style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }}
               >
                 <Marker longitude={-50.3474597} latitude={-21.3004256} color="#ef4444" anchor="bottom" />
-              </Map>
+              </MapGL>
             </div>
           </div>
         </div>
