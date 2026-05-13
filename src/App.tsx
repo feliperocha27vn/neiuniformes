@@ -12,8 +12,8 @@ import {
   Truck,
   Utensils,
 } from 'lucide-react';
-import MapGL, { Marker } from 'react-map-gl/maplibre';
-import 'maplibre-gl/dist/maplibre-gl.css';
+import MapGL, { Marker } from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const WHATSAPP_NUMBER = '5518997029009';
 const WHATSAPP_MESSAGE = 'Olá, vim pelo site e gostaria de solicitar um orçamento para uniformes da minha empresa!';
@@ -381,30 +381,13 @@ function App() {
             {/* Mapa react-map-gl */}
             <div className="relative flex-1 min-h-[300px] md:min-h-[400px] rounded-lg overflow-hidden border border-line shadow-sm bg-bg-soft z-0">
               <MapGL
+                mapboxAccessToken="SUA_CHAVE_DO_MAPBOX_AQUI"
                 initialViewState={{
                   longitude: -50.3571725,
                   latitude: -21.3036133,
                   zoom: 16.5
                 }}
-                mapStyle={{
-                  version: 8,
-                  sources: {
-                    osm: {
-                      type: 'raster',
-                      tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
-                      tileSize: 256,
-                      attribution: '&copy; OpenStreetMap contributors',
-                      maxzoom: 19
-                    }
-                  },
-                  layers: [
-                    {
-                      id: 'osm',
-                      type: 'raster',
-                      source: 'osm'
-                    }
-                  ]
-                }}
+                mapStyle="mapbox://styles/mapbox/streets-v12"
                 style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }}
               >
                 <Marker longitude={-50.3571725} latitude={-21.3036133} color="#ef4444" anchor="bottom" />
