@@ -370,7 +370,7 @@ function App() {
             {/* Mapa iframe */}
             <div className="relative flex-1 min-h-[300px] md:min-h-[400px] rounded-lg overflow-hidden border border-line shadow-sm bg-bg-soft">
               <iframe
-                src="https://maps.google.com/maps?q=Av.+Edilsinho+Capuano,+60+-+Jardim+Capuano,+Birigui+-+SP,+16204-115&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=Avenida+Edilsinho+Capuano,+60,+Jardim+Capuano,+Birigui,+SP&t=&z=17&ie=UTF8&output=embed"
                 className="absolute inset-0 w-full h-full border-0"
                 allowFullScreen={false}
                 loading="lazy"
