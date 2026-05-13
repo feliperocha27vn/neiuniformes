@@ -353,7 +353,8 @@ function App() {
                   </h3>
                 </div>
                 <p className="font-body text-sm md:text-base text-muted leading-relaxed">
-                  Av. Edilsinho Capuano, 60 - Jardim Capuano<br />
+                  Av. Edilsinho Capuano, 60 - Jardim Capuano
+                  <br />
                   Birigui - SP, 16204-115
                 </p>
                 <a
@@ -370,12 +371,15 @@ function App() {
             {/* Mapa iframe */}
             <div className="relative flex-1 min-h-[300px] md:min-h-[400px] rounded-lg overflow-hidden border border-line shadow-sm bg-bg-soft">
               <iframe
-                src="https://maps.google.com/maps?q=Avenida+Edilsinho+Capuano,+60,+Jardim+Capuano,+Birigui,+SP&t=&z=17&ie=UTF8&output=embed"
-                className="absolute inset-0 w-full h-full border-0"
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
                 title="Localização da Fábrica"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14869.071851989707!2d-50.3474597!3d-21.3004256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAv.%20Edilsinho%20Capuano%2C%2060%20-%20Jardim%20Capuano%2C%20Birigui%20-%20SP%2C%2016204-115!5e0!3m2!1spt-BR!2sbr!4v1778699614584!5m2!1spt-BR!2sbr"
+                className="absolute inset-0"
               />
             </div>
           </div>
@@ -432,37 +436,6 @@ function App() {
                 Uniformes corporativos personalizados para empresas que querem
                 vestir suas equipes com presença, conforto e confiança.
               </p>
-            </div>
-
-            <div className="flex gap-12 md:gap-16 lg:gap-20">
-              <div className="flex flex-col gap-3">
-                <span className="font-heading text-base font-bold text-bg">
-                  Links
-                </span>
-                <span className="font-body text-sm md:text-[15px] text-footer-text cursor-pointer hover:text-bg transition-colors">
-                  Diferenciais
-                </span>
-                <span className="font-body text-sm md:text-[15px] text-footer-text cursor-pointer hover:text-bg transition-colors">
-                  Como funciona
-                </span>
-                <span className="font-body text-sm md:text-[15px] text-footer-text cursor-pointer hover:text-bg transition-colors">
-                  Produtos
-                </span>
-              </div>
-              <div className="flex flex-col gap-3">
-                <span className="font-heading text-base font-bold text-bg">
-                  Contato
-                </span>
-                <span className="font-body text-[13px] md:text-sm text-footer-text">
-                  WhatsApp: (00) 00000-0000
-                </span>
-                <span className="font-body text-[13px] md:text-sm text-footer-text">
-                  contato@neiuniformes.com.br
-                </span>
-                <span className="font-body text-[13px] md:text-sm text-footer-text">
-                  Atendimento para empresas
-                </span>
-              </div>
             </div>
           </div>
 
