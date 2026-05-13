@@ -12,6 +12,19 @@ import {
   Truck,
   Utensils,
 } from 'lucide-react';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+const customIcon = new L.Icon({
+  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+  iconSize: [25, 41],
+  iconAnchor: [12, 41],
+  popupAnchor: [1, -34],
+  shadowSize: [41, 41]
+});
 
 function App() {
   return (
@@ -368,19 +381,25 @@ function App() {
               </div>
             </div>
 
-            {/* Mapa iframe */}
-            <div className="relative flex-1 min-h-[300px] md:min-h-[400px] rounded-lg overflow-hidden border border-line shadow-sm bg-bg-soft">
-              <iframe
-                title="Localização da Fábrica"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d14869.071851989707!2d-50.3474597!3d-21.3004256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAv.%20Edilsinho%20Capuano%2C%2060%20-%20Jardim%20Capuano%2C%20Birigui%20-%20SP%2C%2016204-115!5e0!3m2!1spt-BR!2sbr!4v1778699614584!5m2!1spt-BR!2sbr"
-                className="absolute inset-0"
-              />
+            {/* Mapa Leaflet */}
+            <div className="relative flex-1 min-h-[300px] md:min-h-[400px] rounded-lg overflow-hidden border border-line shadow-sm bg-bg-soft z-0">
+              <MapContainer 
+                center={[-21.3004256, -50.3474597]} 
+                zoom={17} 
+                scrollWheelZoom={false}
+                style={{ height: '100%', width: '100%', position: 'absolute', inset: 0 }}
+              >
+                <TileLayer
+                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                  url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                />
+                <Marker position={[-21.3004256, -50.3474597]} icon={customIcon}>
+                  <Popup>
+                    <strong>NeiUniformes</strong><br />
+                    Av. Edilsinho Capuano, 60
+                  </Popup>
+                </Marker>
+              </MapContainer>
             </div>
           </div>
         </div>
