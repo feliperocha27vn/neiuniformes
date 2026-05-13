@@ -12,7 +12,7 @@ import {
   Truck,
   Utensils,
 } from 'lucide-react';
-import MapGL, { Marker } from 'react-map-gl';
+import MapGL, { Marker, NavigationControl, FullscreenControl } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const WHATSAPP_NUMBER = '5518997029009';
@@ -381,16 +381,19 @@ function App() {
             {/* Mapa react-map-gl */}
             <div className="relative flex-1 min-h-[300px] md:min-h-[400px] rounded-lg overflow-hidden border border-line shadow-sm bg-bg-soft z-0">
               <MapGL
-                mapboxAccessToken="SUA_CHAVE_DO_MAPBOX_AQUI"
+                mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN || "SUA_CHAVE_DO_MAPBOX_AQUI"}
                 initialViewState={{
                   longitude: -50.3571725,
                   latitude: -21.3036133,
-                  zoom: 16.5
+                  zoom: 16.5,
+                  pitch: 45
                 }}
                 mapStyle="mapbox://styles/mapbox/streets-v12"
                 style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }}
               >
                 <Marker longitude={-50.3571725} latitude={-21.3036133} color="#ef4444" anchor="bottom" />
+                <NavigationControl position="bottom-right" />
+                <FullscreenControl position="top-right" />
               </MapGL>
             </div>
           </div>
