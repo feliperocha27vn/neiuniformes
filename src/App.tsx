@@ -15,6 +15,10 @@ import {
 import MapGL, { Marker } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 
+const WHATSAPP_NUMBER = '5518997029009';
+const WHATSAPP_MESSAGE = 'Olá, vim pelo site e gostaria de solicitar um orçamento para uniformes da minha empresa!';
+const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+
 function App() {
   return (
     <>
@@ -47,12 +51,14 @@ function App() {
                   {link}
                 </a>
               ))}
-              <button
-                type="button"
-                className="bg-accent text-zinc-50 font-body text-sm font-bold py-2.5 px-6 rounded-full cursor-pointer border-none hover:-translate-y-0.5 hover:shadow-md shadow-accent/30 transition-all"
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-accent text-zinc-50 font-body text-sm font-bold py-2.5 px-6 rounded-full cursor-pointer border-none hover:-translate-y-0.5 hover:shadow-md shadow-accent/30 transition-all no-underline"
               >
                 Solicitar Orçamento
-              </button>
+              </a>
             </nav>
           </div>
         </header>
@@ -84,12 +90,14 @@ function App() {
               </p>
 
               <div className="flex flex-col md:flex-row md:items-center gap-3">
-                <button
-                  type="button"
-                  className="flex items-center justify-center gap-2 bg-accent text-zinc-50 font-body text-base font-bold py-4 px-8 rounded-full cursor-pointer border-none hover:-translate-y-0.5 hover:shadow-lg shadow-accent/30 transition-all md:max-w-sm lg:max-w-xs"
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-accent text-zinc-50 font-body text-base font-bold py-4 px-8 rounded-full cursor-pointer border-none hover:-translate-y-0.5 hover:shadow-lg shadow-accent/30 transition-all md:max-w-sm lg:max-w-xs no-underline"
                 >
                   Solicitar Orçamento
-                </button>
+                </a>
                 <p className="text-center md:text-left font-body text-sm font-medium text-muted">
                   Resposta rápida pelo WhatsApp
                 </p>
@@ -425,13 +433,15 @@ function App() {
             </p>
           </div>
 
-          <button
-            type="button"
-            className="flex items-center justify-center gap-2.5 w-full md:w-fit bg-text text-bg font-body text-base font-extrabold py-4 md:py-5 px-8 rounded-full cursor-pointer border-none hover:-translate-y-0.5 hover:shadow-lg shadow-text/30 hover:bg-text/90 transition-all"
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2.5 w-full md:w-fit bg-text text-bg font-body text-base font-extrabold py-4 md:py-5 px-8 rounded-full cursor-pointer border-none hover:-translate-y-0.5 hover:shadow-lg shadow-text/30 hover:bg-text/90 transition-all no-underline"
           >
             <MessageCircle className="w-4.5 md:w-5 h-4.5 md:h-5" />
             Fale conosco pelo WhatsApp
-          </button>
+          </a>
         </div>
       </motion.section>
 
