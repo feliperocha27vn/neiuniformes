@@ -363,12 +363,12 @@ function App() {
                   </h3>
                 </div>
                 <p className="font-body text-sm md:text-base text-muted leading-relaxed">
-                  Av. Edilsinho Capuano, 60 - Jardim Capuano
+                  Av. Edilsinho Capuano, 60 - Res. Capuano
                   <br />
-                  Birigui - SP, 16204-115
+                  Birigui - SP, 16204-100
                 </p>
                 <a
-                  href="https://www.google.com/maps/search/?api=1&query=Av.+Edilsinho+Capuano,+60+-+Jardim+Capuano,+Birigui+-+SP,+16204-115"
+                  href="https://www.google.com/maps/place/Av.+Edilsinho+Capuano,+60+-+Res.+Capuano,+Birigui+-+SP,+16204-100/@-21.3036396,-50.3581904,19.06z/data=!4m6!3m5!1s0x94966b305dc31333:0x61a7b209aea9f9cc!8m2!3d-21.3036133!4d-50.3571725!16s%2Fg%2F11y6nsgck6?entry=ttu&g_ep=EgoyMDI2MDUxMS4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body text-sm font-bold text-accent hover:text-accent-dark transition-colors w-fit mt-2"
@@ -382,8 +382,8 @@ function App() {
             <div className="relative flex-1 min-h-[300px] md:min-h-[400px] rounded-lg overflow-hidden border border-line shadow-sm bg-bg-soft z-0">
               <MapGL
                 initialViewState={{
-                  longitude: -50.3474597,
-                  latitude: -21.3004256,
+                  longitude: -50.3571725,
+                  latitude: -21.3036133,
                   zoom: 16.5
                 }}
                 mapStyle={{
@@ -407,7 +407,7 @@ function App() {
                 }}
                 style={{ width: '100%', height: '100%', position: 'absolute', inset: 0 }}
               >
-                <Marker longitude={-50.3474597} latitude={-21.3004256} color="#ef4444" anchor="bottom" />
+                <Marker longitude={-50.3571725} latitude={-21.3036133} color="#ef4444" anchor="bottom" />
               </MapGL>
             </div>
           </div>
